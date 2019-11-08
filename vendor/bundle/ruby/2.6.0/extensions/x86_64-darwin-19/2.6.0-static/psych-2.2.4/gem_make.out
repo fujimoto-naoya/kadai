@@ -1,0 +1,270 @@
+current directory: /Users/fujimotonaoya/Documents/GitHub/kadai1/vendor/bundle/ruby/2.6.0/gems/psych-2.2.4/ext/psych
+/Users/fujimotonaoya/.rbenv/versions/2.6.2/bin/ruby -I /Users/fujimotonaoya/.rbenv/versions/2.6.2/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191107-21252-1q9bcvb.rb extconf.rb
+checking for yaml.h... no
+checking for _WIN32... no
+checking for dlfcn.h... yes
+checking for inttypes.h... yes
+checking for memory.h... yes
+checking for stdint.h... yes
+checking for stdlib.h... yes
+checking for strings.h... yes
+checking for string.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for yaml.h... yes
+checking for config.h... yes
+creating Makefile
+
+current directory: /Users/fujimotonaoya/Documents/GitHub/kadai1/vendor/bundle/ruby/2.6.0/gems/psych-2.2.4/ext/psych
+make "DESTDIR=" clean
+
+current directory: /Users/fujimotonaoya/Documents/GitHub/kadai1/vendor/bundle/ruby/2.6.0/gems/psych-2.2.4/ext/psych
+make "DESTDIR="
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+compiling psych_emitter.c
+compiling psych.c
+compiling psych_parser.c
+compiling ./yaml/loader.c
+./yaml/loader.c:303:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    index = parser->document->nodes.top - parser->document->nodes.start;
+          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./yaml/loader.c:350:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    index = parser->document->nodes.top - parser->document->nodes.start;
+          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./yaml/loader.c:413:41: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    index = parser->document->nodes.top - parser->document->nodes.start;
+          ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling ./yaml/scanner.c
+./yaml/scanner.c:1232:26: warning: implicit conversion loses integer precision: 'ptrdiff_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+        parser->indent = column;
+                       ~ ^~~~~~
+1 warning generated.
+compiling ./yaml/api.c
+./yaml/api.c:842:18: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        length = strlen((char *)value);
+               ~ ^~~~~~~~~~~~~~~~~~~~~
+./yaml/api.c:1218:18: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        length = strlen((char *)value);
+               ~ ^~~~~~~~~~~~~~~~~~~~~
+./yaml/api.c:1230:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    return document->nodes.top - document->nodes.start;
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+./yaml/api.c:1275:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    return document->nodes.top - document->nodes.start;
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+./yaml/api.c:1320:32: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    return document->nodes.top - document->nodes.start;
+    ~~~~~~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling ./yaml/writer.c
+compiling ./yaml/dumper.c
+compiling ./yaml/reader.c
+compiling ./yaml/emitter.c
+./yaml/emitter.c:595:56: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "...", 1, 0, 0))
+                                                       ^~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:603:56: warning: passing 'const char [6]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "%YAML", 1, 0, 0))
+                                                       ^~~~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:605:56: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "1.1", 1, 0, 0))
+                                                       ^~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:617:60: warning: passing 'const char [5]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                if (!yaml_emitter_write_indicator(emitter, "%TAG", 1, 0, 0))
+                                                           ^~~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:637:56: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "---", 1, 0, 0))
+                                                       ^~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:654:56: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "...", 1, 0, 0))
+                                                       ^~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:699:56: warning: passing 'const char [4]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, "...", 1, 0, 0))
+                                                       ^~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:734:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "[", 1, 1, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:746:56: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, ",", 0, 0, 0))
+                                                       ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:751:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "]", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:759:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ",", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:783:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "{", 1, 1, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:795:56: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            if (!yaml_emitter_write_indicator(emitter, ",", 0, 0, 0))
+                                                       ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:800:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "}", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:808:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ",", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:826:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "?", 1, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:845:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ":", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:853:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ":", 1, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:886:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "-", 1, 0, 1))
+                                               ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:930:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "?", 1, 0, 1))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:949:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ":", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:955:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ":", 1, 0, 1))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:1247:17: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                (emitter->anchor_data.alias ? "*" : "&"), 1, 0, 0))
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:1277:52: warning: passing 'const char [3]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, "!<", 1, 0, 0))
+                                                   ^~~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:1282:52: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        if (!yaml_emitter_write_indicator(emitter, ">", 0, 0, 0))
+                                                   ^~~
+./yaml/emitter.c:224:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:1967:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "'", 1, 0, 0))
+                                               ^~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:2011:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "'", 0, 0, 0))
+                                               ^~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:2029:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "\"", 1, 0, 0))
+                                               ^~~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:2167:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "\"", 0, 0, 0))
+                                               ^~~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:2196:20: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        chomp_hint = "-";
+                   ^ ~~~
+./yaml/emitter.c:2205:24: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            chomp_hint = "-";
+                       ^ ~~~
+./yaml/emitter.c:2209:24: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+            chomp_hint = "+";
+                       ^ ~~~
+./yaml/emitter.c:2219:28: warning: assigning to 'char *' from 'const char [2]' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                chomp_hint = "+";
+                           ^ ~~~
+./yaml/emitter.c:2243:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, "|", 1, 0, 0))
+                                               ^~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+./yaml/emitter.c:2283:48: warning: passing 'const char [2]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    if (!yaml_emitter_write_indicator(emitter, ">", 1, 0, 0))
+                                               ^~~
+./yaml/emitter.c:1787:15: note: passing argument to parameter 'indicator' here
+        char *indicator, int need_whitespace,
+              ^
+35 warnings generated.
+compiling ./yaml/parser.c
+linking shared-object psych.bundle
+
+current directory: /Users/fujimotonaoya/Documents/GitHub/kadai1/vendor/bundle/ruby/2.6.0/gems/psych-2.2.4/ext/psych
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20191107-21252-1klonj6

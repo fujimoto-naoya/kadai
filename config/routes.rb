@@ -1,8 +1,22 @@
 Rails.application.routes.draw do
-  resources :items do
-    collection do
-      get 'json'
-    end
-  end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+
+  root :to => "oauth_test#index"
+
+
+  devise_for :users, controllers: {
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
+
+
+  get 'oauth_test/show' => 'oauth_test#show'
+
+
+  get 'oauth_test/error' => 'oauth_test#error'
+
+
+
+
 end
