@@ -1,13 +1,11 @@
-module api
-  module v1
+module Api
 
     class ItemsController < ApplicationController
-      before_action :set_item, only: [:show, :edit, :update, :destroy]
-      before_action :set_item, only: [:show,:update, :destroy]
+      before_action :set_item, only: [:show,:update,:destroy]
 
 
       def index
-        items = Item.order(cerated_at: : desc)
+        items = Item.order(created_at: :desc)
         # created_at でsort
         render json: { status:'SUCCESS', message: 'Loaded items', data: items }
       end
@@ -41,20 +39,19 @@ module api
 
       def destroy
         @item.destroy
-          render json: { status: 'SUCCESS' ,message: 'Deleted the item', data: @item}
-        end
+        render json: { status: 'SUCCESS' ,message: 'Deleted the item', data: @item}
       end
 
       private
 
-        def set_item
-          @item = Item.find(params[:id])
-        end
+      def set_item
+        @item = Item.find(params[:id])
+      end
 
 
-        def item_params
-          params.require(:item).permit(:image, :title, :description, :price)
-        end
+      def item_params
+        params.require(:item).permit(:image, :title, :description, :price)
+      end
     end
   end
 end
