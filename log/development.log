@@ -18384,3 +18384,91 @@ Processing by OauthTestController#index as HTML
 Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 7736)
 
 
+Started GET "/" for ::1 at 2019-11-11 10:42:51 +0900
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 477)
+Completed 200 OK in 2283ms (Views: 2276.4ms | ActiveRecord: 0.0ms | Allocations: 1366199)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:42:55 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:42:57 +0900
+Started GET "/users/auth/github/callback?code=028f9193adef051a6e27&state=12e4a01be9d7343d85beed2d84b236fdb65fb5c5f5c348f6" for ::1 at 2019-11-11 10:42:59 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"028f9193adef051a6e27", "state"=>"12e4a01be9d7343d85beed2d84b236fdb65fb5c5f5c348f6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 40ms (ActiveRecord: 12.0ms | Allocations: 12301)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-11 10:43:01 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 285)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 1.0ms | Allocations: 9074)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 10:43:03 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MTjEovYJ6Ccf5UgaluiT+6ECTcDwWUXNjDrckVNyOhmxBh/DRWvsi067xaU2yBhaj9uQuZBuUl+DSOra6e/VBg=="}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms | Allocations: 2856)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:03 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 7812)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:43:05 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:43:05 +0900
+Started GET "/users/auth/github/callback?code=df8ec779a083f7d66f09&state=daf35434d6870233c34c81b3527f24f5bc70cdac9b264cb7" for ::1 at 2019-11-11 10:43:05 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"df8ec779a083f7d66f09", "state"=>"daf35434d6870233c34c81b3527f24f5bc70cdac9b264cb7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1132)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-11 10:43:08 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.3ms | Allocations: 8619)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:13 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/oauth_test/index.html.erb:2
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 966)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 2.9ms | Allocations: 8658)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 10:43:15 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2MMQ1JqSBA/rtV6wHoBXjaxbOBHLTW9MW93q5n7Mm3PHxXdUlFjbHQiF+2tiUQ3PwaKU3lqbv2vU2dWIaN/Dxg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 2162)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:15 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 7819)
+
+
