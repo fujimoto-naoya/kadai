@@ -3,6 +3,8 @@ module api
 
     class ItemsController < ApplicationController
       before_action :set_item, only: [:show, :edit, :update, :destroy]
+      before_action :set_item, only: [:show,:update, :destroy]
+
 
       def index
         items = Item.order(cerated_at: : desc)
@@ -49,7 +51,7 @@ module api
           @item = Item.find(params[:id])
         end
 
-        
+
         def item_params
           params.require(:item).permit(:image, :title, :description, :price)
         end
