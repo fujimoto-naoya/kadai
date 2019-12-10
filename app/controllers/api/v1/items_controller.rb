@@ -2,6 +2,8 @@ module Api
   module V1
     class ItemsController < ApplicationController
       before_action :set_item, only: [:show,:update,:destroy]
+      before_action :authenticate
+      protect_from_forgery
 
 
       def index
@@ -52,6 +54,14 @@ module Api
       def item_params
         params.require(:item).permit(:image, :title, :description, :price)
       end
+
+      def authenticate
+        authenticate_or_request_with_http_token do |token,options|
+          auth_user = User.find_by(api_token: token)
+          auth_user != nil ? true : false
+        end
+      end
+
     end
   end
 end
