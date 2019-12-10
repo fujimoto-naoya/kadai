@@ -1,0 +1,7 @@
+<h1>Login</h1>
+<% if user_signed_in? %>
+  <%= link_to "MyPage", oauth_test_show_path %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'githubでサインアップ', user_github_omniauth_authorize_path %>
+<% end %>

@@ -6,7 +6,7 @@ ruby '2.6.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+#gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -71,3 +71,19 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'friendly_id'
+
+## add kadai2
+
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+
+gem 'dotenv-rails'
+
+
+gem 'yaml_db'
+gem 'mysql2'
+gem 'psych', '~> 2.2.1'

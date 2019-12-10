@@ -18155,3 +18155,981 @@ Processing by ItemsController#json as */*
 Completed 200 OK in 37ms (Views: 8.3ms | ActiveRecord: 1.0ms | Allocations: 8808)
 
 
+Started GET "/" for ::1 at 2019-11-07 19:04:15 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 650)
+Completed 200 OK in 2067ms (Views: 2059.9ms | ActiveRecord: 0.0ms | Allocations: 1381293)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-07 19:04:19 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-07 19:04:19 +0900
+Started GET "/users/auth/github/callback?code=0fdb53b8d0823e7dc650&state=01164436dec31bf7d0b1e09853f77903764521b9aadf373e" for ::1 at 2019-11-07 19:04:20 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"0fdb53b8d0823e7dc650", "state"=>"01164436dec31bf7d0b1e09853f77903764521b9aadf373e"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 81ms (ActiveRecord: 21.7ms | Allocations: 15281)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-07 19:04:21 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 283)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 5.4ms | Allocations: 8995)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-07 19:04:22 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nHjnrcv3oQK3kHFEvp05Zkon3X7zID0CtIRkuyInf2iJ7fm0qq/ZKP6desJK0OxfMBdD6JZhgInlQOye80Jcrw=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms | Allocations: 2888)
+
+
+Started GET "/" for ::1 at 2019-11-07 19:04:22 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+Completed 200 OK in 75ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 7749)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-07 19:04:23 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-07 19:04:24 +0900
+Started GET "/users/auth/github/callback?code=23ecdcddd8980a2816ca&state=04cae5c08ab3cc89cc2385307b174abf6399aba61c593bf9" for ::1 at 2019-11-07 19:04:24 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"23ecdcddd8980a2816ca", "state"=>"04cae5c08ab3cc89cc2385307b174abf6399aba61c593bf9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1147)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-07 19:04:25 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 81)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 2.0ms | Allocations: 8558)
+
+
+Started GET "/" for ::1 at 2019-11-07 19:04:29 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/oauth_test/index.html.erb:2
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 966)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 1.4ms | Allocations: 8575)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-07 19:04:31 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l3i95ZiPjqRm29P3QklmDLOKnXSvvw8sWWnY47Fxzf/MiA868PWlzFagiC9480OCNFFXkHkLhbcQg9dKuhDHOg=="}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 4.3ms | Allocations: 2141)
+
+
+Started GET "/" for ::1 at 2019-11-07 19:04:31 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 7734)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:08 +0900
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 477)
+Completed 200 OK in 1928ms (Views: 1923.5ms | ActiveRecord: 0.0ms | Allocations: 1357682)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:13 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:14 +0900
+Started GET "/users/auth/github/callback?code=a987a446629079a71778&state=6c8d8bcfae0909b2d9ed23fd8c3f86339ae7f4ac792da9a0" for ::1 at 2019-11-08 09:46:14 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"a987a446629079a71778", "state"=>"6c8d8bcfae0909b2d9ed23fd8c3f86339ae7f4ac792da9a0"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 58ms (ActiveRecord: 16.4ms | Allocations: 11618)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-08 09:46:15 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 283)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 8973)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-08 09:46:17 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GtigVIRFlpqH3dEKbo89/wPo4Fy0HEAPbXDmJ8TII2Gpibq1+V1UHQ0sR/QrU4hbauBzaVXEFeXfr4ZM/Hn3XQ=="}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms | Allocations: 2614)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:17 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 7746)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:20 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:20 +0900
+Started GET "/users/auth/github/callback?code=3e53199de122d71697f5&state=8432a8355da31c297ab5d961a04bb5f3882f35c57074634c" for ::1 at 2019-11-08 09:46:20 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"3e53199de122d71697f5", "state"=>"8432a8355da31c297ab5d961a04bb5f3882f35c57074634c"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1132)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-08 09:46:21 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 6.1ms | Allocations: 8549)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:26 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/oauth_test/index.html.erb:2
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 966)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.8ms | Allocations: 8593)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-08 09:46:29 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 45ms (Views: 24.8ms | ActiveRecord: 16.2ms | Allocations: 8548)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:36 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/oauth_test/index.html.erb:2
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 980)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 2.1ms | Allocations: 8603)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-08 09:46:38 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Fp7ey3ED+9GbyXloJkrheT3SlARoi9D6aS6yWflV8cvRPp3n3Drz846JYrbRib2bEVCKoFjmeIFJlEuoHNw2TQ=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 2131)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:38 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 129)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 7741)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:39 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-08 09:46:39 +0900
+Started GET "/users/auth/github/callback?code=67b49e914c2173fbe951&state=9433b7857053ee2d699b15e11657d146379eb18326093cfa" for ::1 at 2019-11-08 09:46:40 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"67b49e914c2173fbe951", "state"=>"9433b7857053ee2d699b15e11657d146379eb18326093cfa"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1147)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-08 09:46:40 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 1.2ms | Allocations: 8551)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-08 09:46:41 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N+FJAD6kiNZnKTyHBr66vHcg6m/qlg9BoVg2gtHxkwgOw4IqaIrrSidk1Od7wtK1dTY4SE9QMKd5JQnTaRwJkA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms | Allocations: 2130)
+
+
+Started GET "/" for ::1 at 2019-11-08 09:46:41 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 7736)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:42:51 +0900
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 477)
+Completed 200 OK in 2283ms (Views: 2276.4ms | ActiveRecord: 0.0ms | Allocations: 1366199)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:42:55 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:42:57 +0900
+Started GET "/users/auth/github/callback?code=028f9193adef051a6e27&state=12e4a01be9d7343d85beed2d84b236fdb65fb5c5f5c348f6" for ::1 at 2019-11-11 10:42:59 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"028f9193adef051a6e27", "state"=>"12e4a01be9d7343d85beed2d84b236fdb65fb5c5f5c348f6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 40ms (ActiveRecord: 12.0ms | Allocations: 12301)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-11 10:43:01 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 285)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 1.0ms | Allocations: 9074)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 10:43:03 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MTjEovYJ6Ccf5UgaluiT+6ECTcDwWUXNjDrckVNyOhmxBh/DRWvsi067xaU2yBhaj9uQuZBuUl+DSOra6e/VBg=="}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms | Allocations: 2856)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:03 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 7812)
+
+
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:43:05 +0900
+Started GET "/users/auth/github" for ::1 at 2019-11-11 10:43:05 +0900
+Started GET "/users/auth/github/callback?code=df8ec779a083f7d66f09&state=daf35434d6870233c34c81b3527f24f5bc70cdac9b264cb7" for ::1 at 2019-11-11 10:43:05 +0900
+Processing by Users::OmniauthCallbacksController#github as HTML
+  Parameters: {"code"=>"df8ec779a083f7d66f09", "state"=>"daf35434d6870233c34c81b3527f24f5bc70cdac9b264cb7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`provider` = 'github' AND `users`.`uid` = '56285212' LIMIT 1[0m
+  ↳ app/models/user.rb:14:in `find_for_github_oauth'
+Redirected to http://localhost:3000/oauth_test/show
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1132)
+
+
+Started GET "/oauth_test/show" for ::1 at 2019-11-11 10:43:08 +0900
+Processing by OauthTestController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/oauth_test_controller.rb:8:in `require_login'
+  Rendering oauth_test/show.html.erb within layouts/application
+  Rendered oauth_test/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.3ms | Allocations: 8619)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:13 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/oauth_test/index.html.erb:2
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 966)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 2.9ms | Allocations: 8658)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-11 10:43:15 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2MMQ1JqSBA/rtV6wHoBXjaxbOBHLTW9MW93q5n7Mm3PHxXdUlFjbHQiF+2tiUQ3PwaKU3lqbv2vU2dWIaN/Dxg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 2162)
+
+
+Started GET "/" for ::1 at 2019-11-11 10:43:15 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 7819)
+
+
+Started GET "/items" for ::1 at 2019-11-11 11:23:21 +0900
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for ::1 at 2019-11-11 11:23:45 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/" for ::1 at 2019-11-11 11:24:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/1" for ::1 at 2019-11-11 11:24:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/items/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items/" for ::1 at 2019-11-11 11:25:03 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items/" for ::1 at 2019-11-11 11:55:43 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items/" for ::1 at 2019-11-11 11:57:01 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1items/" for ::1 at 2019-11-11 11:58:07 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1items"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/items/" for ::1 at 2019-11-11 11:58:09 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:1: class/module name must be CONSTANT
+module api
+       ^~~
+/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:2: class/module name must be CONSTANT
+  module v1
+         ^~
+/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+...tems = Item.order(cerated_at: : desc)
+...                              ^
+/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:1: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:2: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:1: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:2: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:1: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:2: class/module name must be CONSTANT
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/items/" for ::1 at 2019-11-11 11:58:31 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+...tems = Item.order(cerated_at: : desc)
+...                              ^
+/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:9: syntax error, unexpected ':'
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/items/" for ::1 at 2019-11-11 11:59:15 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/items/" for ::1 at 2019-11-11 12:00:22 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started POST "/api/v1/items/" for ::1 at 2019-11-11 12:01:18 +0900
+  [1m[35m (6.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/items/" for ::1 at 2019-11-11 12:01:24 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for ::1 at 2019-11-11 12:01:48 +0900
+Processing by OauthTestController#index as HTML
+  Rendering oauth_test/index.html.erb within layouts/application
+  Rendered oauth_test/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 354)
+Completed 200 OK in 1470ms (Views: 1468.6ms | ActiveRecord: 0.0ms | Allocations: 1357186)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-11-11 12:02:06 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/fujimotonaoya/.rbenv/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/fujimotonaoya/.rbenv/gems/2.6.0/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (Duration: 21.7ms | Allocations: 6583)
+  Rendered /Users/fujimotonaoya/.rbenv/gems/2.6.0/gems/actionpack-6.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.8ms | Allocations: 916)
+  Rendered /Users/fujimotonaoya/.rbenv/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 34.6ms | Allocations: 11388)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 12778)
+
+
+Started GET "/api/v1/items" for ::1 at 2019-11-11 12:02:22 +0900
+  
+SyntaxError (/Users/fujimotonaoya/Documents/GitHub/kadai1/app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/items_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/items" for ::1 at 2019-11-11 12:04:55 +0900
+Processing by Api::V1::ItemsController#index as */*
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT `items`.* FROM `items` ORDER BY `cerated_at` DESC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:11:in `index'
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 54.0ms | Allocations: 4921)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'cerated_at' in 'order clause'):
+  
+app/controllers/api/v1/items_controller.rb:11:in `index'
+Started GET "/api/v1/items" for ::1 at 2019-11-11 12:05:44 +0900
+Processing by Api::V1::ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT `items`.* FROM `items` ORDER BY `items`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:11:in `index'
+Completed 200 OK in 20ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 2647)
+
+
+Started POST "/api/v1/items" for ::1 at 2019-11-11 12:05:52 +0900
+Processing by Api::V1::ItemsController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:217:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:249:in `handle_unverified_request'
+devise (4.7.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:244:in `verify_authenticity_token'
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/items" for ::1 at 2019-11-11 12:07:14 +0900
+Processing by Api::V1::ItemsController#index as */*
+  [1m[36mItem Load (15.8ms)[0m  [1m[34mSELECT `items`.* FROM `items` ORDER BY `items`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:11:in `index'
+Completed 200 OK in 18ms (Views: 1.5ms | ActiveRecord: 15.8ms | Allocations: 1033)
+
+
+Started POST "/api/v1/items" for ::1 at 2019-11-11 12:07:23 +0900
+Processing by Api::V1::ItemsController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:217:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:249:in `handle_unverified_request'
+devise (4.7.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:244:in `verify_authenticity_token'
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/items" for ::1 at 2019-11-11 12:07:37 +0900
+Processing by Api::V1::ItemsController#create as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:217:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:249:in `handle_unverified_request'
+devise (4.7.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:244:in `verify_authenticity_token'
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

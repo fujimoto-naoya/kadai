@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
-  resources :items do
-    collection do
-      get 'json'
+
+  root :to => "oauth_test#index"
+
+  devise_for :users, controllers: {
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
+  get 'oauth_test/show' => 'oauth_test#show'
+  get 'oauth_test/error' => 'oauth_test#error'
+
+  namespace 'api' do
+    namespace 'v1' do
+      resources :items
     end
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
