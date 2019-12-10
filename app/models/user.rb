@@ -17,6 +17,8 @@ class User < ApplicationRecord
     unless user
       user = User.new(provider: auth.provider,
                       uid:      auth.uid,
+                      api_token: User.create_unique_string,
+                      access_token: auth.credentials.token,
                       name:     auth.info.name,
                       email:    auth.info.email,
                       password: Devise.friendly_token[0, 20]
